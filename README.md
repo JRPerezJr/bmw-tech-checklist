@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##BMW Technician's Checklist with React
+## BMW Technician's Checklist with React
 
 ## Technologies & Libraries Utilized:
 
