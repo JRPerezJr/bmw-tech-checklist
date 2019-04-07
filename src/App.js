@@ -4,24 +4,44 @@ import Button from '@material/react-button';
 import './App.scss';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
-  return <div
-            style={{textDecoration: todo.isCompleted ? 'line-through red' : ''}}
-            className="todo"
-          >
-          { todo.text }
-          <div>
-            <button
+  return <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell" style={{textDecoration: todo.isCompleted ? 'line-through red' : ''}}><span>{ todo.text }</span></div>
+              </div>
+            </div>
+            <Button
               onClick={() => completeTodo(index)}
             >
             Complete
-            </button>
-            <button
+            </Button>
+            <Button
               onClick={() => removeTodo(index)}
             >
             X
-            </button>
+            </Button>
           </div>
         </div>;
+        // <div
+        //     style={{textDecoration: todo.isCompleted ? 'line-through red' : ''}}
+        //     className="todo"
+        //   >
+        //   { todo.text }
+        //   <div>
+        //     <Button
+        //       onClick={() => completeTodo(index)}
+        //     >
+        //     Complete
+        //     </Button>
+        //     <Button
+        //       onClick={() => removeTodo(index)}
+        //     >
+        //     X
+        //     </Button>
+        //   </div>
+        // </div>;
+        
 }
 function TodoForm({addTodo}) {
    const [value, setValue] = useState('');
