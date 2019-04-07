@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
+import Button from '@material/react-button';
+
+import './App.scss';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return <div
