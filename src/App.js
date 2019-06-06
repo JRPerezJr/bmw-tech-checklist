@@ -1,25 +1,38 @@
 import React, { useState } from 'react';
+import NavBar from './components/NavBar';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+
 import './App.css';
+import { Typography } from '@material-ui/core';
+
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
-  return <div
-            style={{textDecoration: todo.isCompleted ? 'line-through red' : ''}}
-            className="todo"
-          >
-          { todo.text }
-          <div>
-            <button
-              onClick={() => completeTodo(index)}
-            >
-            Complete
-            </button>
-            <button
-              onClick={() => removeTodo(index)}
-            >
-            X
-            </button>
-          </div>
-        </div>;
+  return <Grid container direction="column" justify="flex-start" alignItems="flex-start">
+            <Paper>
+              <div
+                style={{textDecoration: todo.isCompleted ? 'line-through red' : ''}}
+                className="todo"
+              >
+              { todo.text }
+              <div>
+                <Button variant="outlined" color="primary"
+                  onClick={() => completeTodo(index)}
+                >
+                Complete
+                </Button>
+                <Button variant="outlined" color="secondary"
+                  onClick={() => removeTodo(index)}
+                >
+                X
+                </Button>
+              </div>
+              </div>
+            </Paper>
+          </Grid>
 }
 function TodoForm({addTodo}) {
    const [value, setValue] = useState('');
@@ -31,14 +44,19 @@ function TodoForm({addTodo}) {
      setValue('');
    }
    return (
-     <form onSubmit={handleSubmit}>
-      <input type="text" className="input" placeholder="Add to technician todo list" value={value} onChange={e => setValue (e.target.value)}/>
-     </form>
+    <Grid container direction="column" justify="flex-start" alignItems="flex-start">
+      <Paper>
+          <form onSubmit={handleSubmit}>
+            <TextField id="outlined-name" label="Add Item" type="text" className="input" placeholder="Add to list" value={value} onChange={e => setValue (e.target.value)} margin="normal" variant="outlined" />
+          </form>
+      </Paper>
+    </Grid>
    )
  }
  
 
 function App() {
+
   const [todos, setTodos] = useState([
     {
       text: 'Verify the lift area is clear of objects and people',
@@ -135,21 +153,27 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="background-page">
       <div className="todo-list">
-        {todos.map((todo, index) => (
-          <Todo
-            key={index}
-            index={index}
-            todo={todo}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-          />
-        ))}
-        <TodoForm addTodo={addTodo} />
+        <NavBar/>
+        <Typography variant="p">
+          {todos.map((todo, index) => (
+            <Todo 
+              key={index}
+              index={index}
+              todo={todo}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+            />
+          ))}
+          <TodoForm addTodo={addTodo} />
+        </Typography>
       </div>
     </div>
   );
 }
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default App;
