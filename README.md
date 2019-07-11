@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Technologies & Libraries Utilized:
 
-React, React-DOM 
+React, React-DOM
 
 ## Available Scripts
 
@@ -20,4 +20,4 @@ You will also see any lint errors in the console.
 
 ### `npm install/yarn install`
 
-Installs all dependencies.# bmw-tech-checklist
+Installs all dependencies.
