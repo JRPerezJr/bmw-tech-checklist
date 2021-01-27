@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/bmw-tech-checklist/static/css/main.a36d616f.chunk.css",
+    "main.js": "/bmw-tech-checklist/static/js/main.570633b7.chunk.js",
+    "main.js.map": "/bmw-tech-checklist/static/js/main.570633b7.chunk.js.map",
+    "runtime-main.js": "/bmw-tech-checklist/static/js/runtime-main.18322e89.js",
+    "runtime-main.js.map": "/bmw-tech-checklist/static/js/runtime-main.18322e89.js.map",
+    "static/css/2.9a96bb54.chunk.css": "/bmw-tech-checklist/static/css/2.9a96bb54.chunk.css",
+    "static/js/2.ae4f1cd5.chunk.js": "/bmw-tech-checklist/static/js/2.ae4f1cd5.chunk.js",
+    "static/js/2.ae4f1cd5.chunk.js.map": "/bmw-tech-checklist/static/js/2.ae4f1cd5.chunk.js.map",
+    "index.html": "/bmw-tech-checklist/index.html",
+    "static/css/2.9a96bb54.chunk.css.map": "/bmw-tech-checklist/static/css/2.9a96bb54.chunk.css.map",
+    "static/css/main.a36d616f.chunk.css.map": "/bmw-tech-checklist/static/css/main.a36d616f.chunk.css.map",
+    "static/js/2.ae4f1cd5.chunk.js.LICENSE.txt": "/bmw-tech-checklist/static/js/2.ae4f1cd5.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/bmw-tech-checklist/static/media/BMW-MY21-M4-Coupe-Gallery-01.2cf96d97.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18322e89.js",
+    "static/css/2.9a96bb54.chunk.css",
+    "static/js/2.ae4f1cd5.chunk.js",
+    "static/css/main.a36d616f.chunk.css",
+    "static/js/main.570633b7.chunk.js"
+  ]
+}
