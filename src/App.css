@@ -3,7 +3,12 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 .app {
-  background:url(./BMW-MY21-M4-Coupe-Gallery-01.jpg);
+  background:url(./BMW-MY21-M4-Coupe-Gallery-01.jpg) no-repeat center center fixed;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding: 30px;
   height: 100vh;
 }
